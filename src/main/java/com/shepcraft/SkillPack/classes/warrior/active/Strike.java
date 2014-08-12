@@ -31,11 +31,13 @@ public class Strike extends ClassSkill implements TargetSkill{
 	}
 
 	public boolean cast(Player player, LivingEntity target, int level, boolean ally) {
+		boolean worked = false;
 		if (!ally) {
 			int damage = (int) getAttribute(DAMAGE, level);
-			target.damage(damage);
+			target.damage(damage, player);
+			worked = true;
 		}
-		return false;
+		return worked;
 	}
 
 }

@@ -13,13 +13,13 @@ public final class SkillPack extends JavaPlugin implements SkillPlugin {
 	@Override
 	public void onEnable() {
 		// Performed when the plugin is enabled
-		getLogger().info("Custom plugin enabled");
+		getLogger().info("Custom skillpack enabled!");
 	}
 
 	@Override
 	public void onDisable() {
 		// Performed when the plugin is disabled
-		getLogger().info("Customer plugin disabled");
+		getLogger().info("Custom skillpack disabled!");
 	}
 
 	public void registerClasses(SkillAPI api) {
