@@ -1,0 +1,8 @@
+name: SkillPack
+main: com.shepcraft.SkillPack.SkillPack
+version: ${version}
+depend: [SkillAPI]
+commands:
+  skillpack:
+    description: Displays this sample message
+    usage: "Usage: shows this default message"
