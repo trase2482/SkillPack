@@ -2,6 +2,7 @@ package com.shepcraft.SkillPack;
 
 import com.shepcraft.SkillPack.classes.warrior.Warrior;
 import com.shepcraft.SkillPack.classes.warrior.active.Strike;
+import com.shepcraft.SkillPack.classes.warrior.passive.Rage;
 import com.sucy.skill.SkillAPI;
 import com.sucy.skill.api.SkillPlugin;
 
@@ -32,7 +33,8 @@ public final class SkillPack extends JavaPlugin implements SkillPlugin {
 		api.addSkills(
 
 		// Warrior
-				new Strike()
+				new Strike(),
+				new Rage()
 
 		// TODO: Add more skills!
 		);

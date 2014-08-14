@@ -30,8 +30,8 @@ public class Strike extends ClassSkill implements TargetSkill{
 		setAttribute(SkillAttribute.COST, 1, 0);
 		setAttribute(SkillAttribute.LEVEL, 1, 2);
 		setAttribute(SkillAttribute.MANA, 25, -1);
-		setAttribute(DAMAGE, 10, .5);
-		setAttribute(BLEED_DAMAGE, 2, 2);
+		setAttribute(DAMAGE, 10, 0.5);
+		setAttribute(BLEED_DAMAGE, 5, 1);
 	}
 
 	public boolean cast(Player player, LivingEntity target, int level, boolean ally) {
@@ -39,7 +39,7 @@ public class Strike extends ClassSkill implements TargetSkill{
 		if (!ally) {
 			int damage = (int) getAttribute(DAMAGE, level);
 			target.damage(damage, player);
-			DOTSet set = api.getDOTHelper().getDOTSet(event.getTarget())
+			DOTSet set = api.getDOTHelper().getDOTSet(target);
 			set.addEffect(NAME, new DOT(100, getAttribute(BLEED_DAMAGE, level) / 5, 20, true));
 			worked = true;
 			
